@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+	<script src="./assets/js/jquery/jquery.min.js"></script>
+	<script type="text/javascript">
+    (function ($) {
+      $(document).ready(function () {
+        // Set event click to btn traning_examples.
+        $('.btn-cal').on('click', function () {
+          var id_result = '#txt_result'
+          var current_value = $(this).val()
+          var result_value = $(id_result).val()
+
+          switch (current_value) {
+            case 'C':
+              result_value = ''
+              break
+            case '=':
+              result_value = eval(result_value)
+              break
+            default:
+              result_value += current_value
+              break
+          }
+
+          // Update to input result.
+          $(id_result).val(result_value)
+        })
+      })
+    })(jQuery)
+	</script>
+</head>
+<body>
+<div>
+	<input id="txt_result" type="text" placeholder="Nhap phep tinh"/>
+	</br>
+	<input class="btn-cal" type="button" value="+"/>
+	<input class="btn-cal" type="button" value="/"/></br>
+	<input class="btn-cal" type="button" value="-"/>
+	<input class="btn-cal" type="button" value="*"/>
+	</br>
+	<input class="btn-cal" type="button" value="7"/>
+	<input class="btn-cal" type="button" value="8"/>
+	<input class="btn-cal" type="button" value="9"/>
+	<input class="btn-cal" type="button" value="C"/></br>
+	</br>
+	<input class="btn-cal" type="button" value="4"/>
+	<input class="btn-cal" type="button" value="5"/>
+	<input class="btn-cal" type="button" value="6"/>
+	<input class="btn-cal" type="button" value="="/></br>
+	</br>
+	<input class="btn-cal" type="button" value="1"/>
+	<input class="btn-cal" type="button" value="2"/>
+	<input class="btn-cal" type="button" value="3"/>
+	<input class="btn-cal" type="button" value="0"/>
+</div>
+</body>
+</html>
