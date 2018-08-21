@@ -1,1 +1,4 @@
 calculator/.idea
+.gitignore
+.idea/inspectionProfiles/
+.idea/
